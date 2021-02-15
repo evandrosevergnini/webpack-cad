@@ -6,9 +6,11 @@
   "author": "Evandro C. Severginini <evandrosevergnini@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "serve": "webpack serve --mode development --open 'Firefox'",
     "dist": "webpack --mode development"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^5.1.0",
     "webpack": "^5.22.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
