@@ -1,2 +1,2 @@
-import "./assets/css/main.css";
-console.log("Hello webpack!");
+import "./assets/scss/main.scss";
+console.log("Hello webpack with Sass!");
