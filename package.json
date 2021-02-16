@@ -10,6 +10,9 @@
     "dist": "webpack --mode development"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.0.2",
     "html-webpack-plugin": "^5.1.0",
     "sass": "^1.32.7",
