@@ -1,14 +1,15 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: { 
-    main: path.resolve(__dirname, "src", "main.js") 
+  entry: {
+    main: path.resolve(__dirname, "src", "main.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name]-[chunkhash].js",
-    publicPath: "/"
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -27,5 +28,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src", "index.html"),
     }),
+    new CleanWebpackPlugin(),
   ],
 };
