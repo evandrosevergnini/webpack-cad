@@ -30,4 +30,9 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
   ],
+  devServer: {
+    port: 8091,
+    overlay: true,
+    open: "Google Chrome", // 'Google Chrome' on macOS, 'google-chrome' on Linux and 'chrome' on Windows
+  }
 };
