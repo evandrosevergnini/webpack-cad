@@ -1,0 +1,12 @@
+{
+"background_color": "#fff",
+"display": "standalone",
+"orientation":"portrait",
+"theme_color": "#fff",
+"short_name": "Webpack CAD",
+"name": "Webpack CAD App",
+"description": "App para aprendizado do Webpack",
+"lang": "pt-BR",
+"start_url": "index.html",
+"scope": "/"
+}

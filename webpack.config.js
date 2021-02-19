@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -28,6 +29,25 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve(__dirname, "src/assets/images/logo.png"), // svg works too!
+      mode: 'webapp', // optional can be 'webapp', 'light' or 'auto' - 'auto' by default
+      devMode: 'webapp', // optional can be 'webapp' or 'light' - 'light' by default 
+      prefix: 'assets/pwa/', // Prefix path for generated assets
+      manifest: './src/manifest.json',
+      // favicons: {
+      //   appName: 'W CAD',
+      //   appDescription: 'W Cad App',
+      //   developerName: 'Evandro C. Severgnini',
+      //   developerURL: 'https://github.com/evandrosevergnini', // prevent retrieving from the nearest package.json
+      //   background: '#eee',
+      //   theme_color: '#eee',
+      //   icons: {
+      //     coast: false,
+      //     yandex: false
+      //   }
+      // }
+    }),
     new HtmlWebpackPlugin({
       filename: "indice.html",
       template: path.resolve(__dirname, "src", "index.html"),
